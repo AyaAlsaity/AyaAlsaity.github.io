@@ -37,7 +37,7 @@ body {
 
 .dark {
   --clr-bg: #000000;
-  --clr-bg-alt: #fff;
+  --clr-bg-alt: #333333;
   --clr-fg: #555;
   --clr-fg-alt: ;
   --clr-primary: #ffffff;
