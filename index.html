@@ -1,101 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aya Alsaity | Technical Lead Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;500&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Aya Alsaity - Lead Mobile Engineer Portfolio" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Aya Alsaity | Mobile Architect</title>
+  </head>
+  <body class="dark" id="top">
+    <header class="header center">
+      <h3>
+        <a href="https://www.linkedin.com/in/ayaalsaiy/" class="link">{Aya}.</a>
+      </h3>
 
-    <div id="progress-bar"></div>
+      <nav class="nav center">
+        <ul class="nav__list center">
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#projects">Projects</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#skills">Skills</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#experience">Experience</a>
+          </li>
+        </ul>
 
-    <div class="container">
-        <header class="reveal">
-            <div class="header-content">
-                <h1>👩‍💻 AYA ALSAITY</h1>
-                <p class="subtitle">Core Mobile Apps Engineer | Technical Lead | Mobile Architect</p>
-                <div class="hero-links">
-                    <a href="https://linkedin.com/in/ayaalsaiy" target="_blank" class="btn">LinkedIn</a>
-                    <a href="mailto:alsaityaya94@gmail.com" class="btn outline">Contact Me</a>
-                </div>
-            </div>
-        </header>
+        <button type="button" aria-label="toggle navigation" class="btn btn--icon nav__hamburger">
+          <i aria-hidden="true" class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
 
-        <section class="reveal section-card">
-            <h2>🎯 Executive Profile</h2>
-            <p>Lead Mobile Engineer specializing in architecting <strong>scalable, secure, and production-grade</strong> Flutter applications. I bridge the gap between complex financial requirements and high-performance mobile systems.</p>
-            <div class="expertise-tags">
-                <span>🏛️ DDD</span>
-                <span>🏗️ Clean Architecture</span>
-                <span>🛡️ FinTech Security</span>
-            </div>
-        </section>
+    <main>
+      <div class="about center">
+        <h1>Hi, I am <span class="about__name">Aya Alsaity.</span></h1>
+        <h2 class="about__role">Technical Lead & Mobile Architect</h2>
+        <p class="about__desc">
+          Lead Mobile Engineer specializing in architecting <b>scalable, secure, and production-grade</b> Flutter applications. 
+          Expert in bridging the gap between complex financial requirements and high-performance mobile systems. 
+          I lead technical designs using <b>Domain-Driven Design (DDD)</b> and Modular Clean Architecture to ensure long-term maintainability.
+        </p>
+        
+        <div class="about__contact center">
+          <a href="mailto:alsaityaya94@gmail.com" class="link">Email: alsaityaya94@gmail.com</a>
+          <p>Contact: +218-92-324-8196</p>
+        </div>
 
-        <section class="reveal">
-            <h2>🛠️ Core Engineering Stack</h2>
-            <div class="stack-grid">
-                <div class="stack-item">
-                    <h4>🏗️ Architecture</h4>
-                    <ul>
-                        <li>Domain-Driven Design (DDD)</li>
-                        <li>Modular Clean Architecture</li>
-                        <li>Repository & Factory Patterns</li>
-                    </ul>
-                </div>
-                <div class="stack-item">
-                    <h4>⚡ State & Navigation</h4>
-                    <ul>
-                        <li><strong>Advanced BLoC</strong> Expert</li>
-                        <li>AutoRoute & Auth Guards</li>
-                        <li>Route Stack Management</li>
-                    </ul>
-                </div>
-                <div class="stack-item">
-                    <h4>🔐 Security & FinTech</h4>
-                    <ul>
-                        <li>Biometric Auth (FaceID/Fingerprint)</li>
-                        <li>Token Refresh Strategy</li>
-                        <li>Secure Encrypted Storage</li>
-                    </ul>
-                </div>
-                <div class="stack-item">
-                    <h4>📡 Networking</h4>
-                    <ul>
-                        <li>Dio Interceptors & Polling</li>
-                        <li>RESTful APIs Integration</li>
-                        <li>Native Platform Channels</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+        <div class="about__contact center">
+          <a href="https://drive.google.com/file/d/1AqX03sb5rbeaPXoOOZ5z7z3cPne79wKI/view?usp=sharing" target="_blank">
+            <span class="btn btn--outline">CV</span> 
+          </a>
 
-        <section class="reveal section-card">
-            <h2>💼 Professional Highlights <a href="https://sarab.tech" target="_blank" class="link-icon">🔗</a></h2>
-            <div class="experience-header">
-                <strong>Lead Mobile Engineer @ Sarab Tech</strong>
-                <span class="date">Feb 2024 – Present</span>
-            </div>
-            <ul class="experience-list">
-                <li><strong>Architecting Banking Systems:</strong> Design of public banking apps using financial modules.</li>
-                <li><strong>Production Ownership:</strong> Managed App Store & Google Play compliance & lifecycles.</li>
-                <li><strong>Technical Leadership:</strong> Technical interviews, mentoring, and error-handling strategies.</li>
-                <li><strong>Quality:</strong> Enforcing separation of concerns through continuous refactoring.</li>
+          <a href="https://github.com/AyaAlsaity" target="_blank" aria-label="github" class="link link--icon">
+            <i aria-hidden="true" class="fab fa-github"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/in/ayaalsaiy/" target="_blank" aria-label="linkedin" class="link link--icon">
+            <i aria-hidden="true" class="fab fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+
+      <section id="experience" class="section experience">
+        <h2 class="section__title">Professional Experience</h2>
+        <div class="projects__grid">
+          <div class="project">
+            <h3>Sarab Tech Company</h3>
+            <h4>Lead Mobile Engineer | 2024 – Present</h4>
+            <p class="project__description">
+              Leading the technical design of public banking applications and managing full App Store/Google Play lifecycles.
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">Technical Leadership</li>
+              <li class="project__stack-item">Banking Systems</li>
+              <li class="project__stack-item">Mentorship</li>
             </ul>
-        </section>
+            <a href="https://www.linkedin.com/company/sarabtech/" target="_blank" class="link link--icon">
+                <i aria-hidden="true" class="fas fa-link"></i>
+            </a>
+          </div>
+        </div>
+      </section>
 
-        <footer class="reveal">
-            <h2>📞 Let's Build Something Scalable</h2>
-            <div class="contact-info">
-                <span>📱 +218-92-324-8196</span>
-                <span>📧 <a href="mailto:alsaityaya94@gmail.com">alsaityaya94@gmail.com</a></span>
-                <span>🔗 <a href="https://linkedin.com/in/ayaalsaiy">LinkedIn Profile</a></span>
-            </div>
-            <p class="timestamp">Last updated: 2026</p>
-        </footer>
-    </div>
+      <section id="projects" class="section projects">
+        <h2 class="section__title">Key Projects</h2>
 
-    <script src="script.js"></script>
-</body>
+        <div class="projects__grid">
+          <div class="project">
+            <h3>Banking Systems</h3>
+            <p class="project__description">
+              Architecting secure financial modules and banking-grade mobile solutions at Sarab Tech.
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">Flutter</li>
+              <li class="project__stack-item">FinTech Security</li>
+              <li class="project__stack-item">Modular Architecture</li>
+            </ul>
+          </div>
+
+          <div class="project">
+            <h3>Hewalati App</h3>
+            <h4>Almdad Company</h4>
+            <p class="project__description">
+              A complete currency exchange system built with a focus on SQFLITE and Provider.
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">SQFLITE</li>
+              <li class="project__stack-item">Provider</li>
+              <li class="project__stack-item">APIs Integration</li>
+            </ul>
+            <a href="https://www.facebook.com/story.php?story_fbid=657276279930033&id=100069429991926" target="_blank" class="link link--icon">
+              <i aria-hidden="true" class="fab fa-facebook"></i>
+            </a>
+          </div>
+
+          <div class="project">
+            <h3>MyCoins</h3>
+            <p class="project__description">
+              Crypto-trading assistant app featuring real-time data and Firebase integration.
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">Firebase</li>
+              <li class="project__stack-item">Cloud Firestore</li>
+              <li class="project__stack-item">Notifications</li>
+            </ul>
+            <a href="https://github.com/AyaAlsaity/-My-Coins-App" target="_blank" class="link link--icon">
+              <i aria-hidden="true" class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section skills" id="skills">
+        <h2 class="section__title">Engineering Stack</h2>
+        <ul class="skills__list">
+          <li class="skills__list-item btn btn--plain">Clean Architecture</li>
+          <li class="skills__list-item btn btn--plain">Domain-Driven Design (DDD)</li>
+          <li class="skills__list-item btn btn--plain">Advanced BLoC</li>
+          <li class="skills__list-item btn btn--plain">FinTech Security</li>
+          <li class="skills__list-item btn btn--plain">Dio & Interceptors</li>
+          <li class="skills__list-item btn btn--plain">Token Refresh Strategy</li>
+          <li class="skills__list-item btn btn--plain">Unit Testing</li>
+          <li class="skills__list-item btn btn--plain">CI/CD & Fastlane</li>
+          <li class="skills__list-item btn btn--plain">Firebase Ecosystem</li>
+          <li class="skills__list-item btn btn--plain">State Management (Provider/GetX)</li>
+          <li class="skills__list-item btn btn--plain">Technical Leadership</li>
+        </ul>
+      </section>
+
+      <footer class="footer">
+        <a href="#top" class="link footer__link">Created By Aya Alsaity | 2026</a>
+      </footer>
+
+      <div class="scroll-container">
+        <div class="scroll-top">
+          <a aria-label="Scroll up" href="#top">
+            <i aria-hidden="true" class="fas fa-arrow-up"></i>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
 </html>
