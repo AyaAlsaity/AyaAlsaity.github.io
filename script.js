@@ -1,60 +1,24 @@
-const body = document.body;
+// Function to handle scroll animations
+function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+    for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 150;
+        if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");
+        }
+    }
+}
 
-const btnTheme = document.querySelector('.btn-theme');
-const btnHamburger = document.querySelector('.fa-bars');
-
-const addThemeClass = (bodyClass, btnClass) => {
-  body.classList.add(bodyClass);
-  btnTheme.classList.add(btnClass);
+// Progress bar logic
+window.onscroll = function() {
+    let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let scrolled = (winScroll / height) * 100;
+    document.getElementById("progress-bar").style.width = scrolled + "%";
+    reveal();
 };
 
-// Set the default theme to dark mode
-let getBodyTheme = 'dark';
-let getBtnTheme = 'fa-sun';
-
-addThemeClass(getBodyTheme, getBtnTheme);
-
-const isDark = () => body.classList.contains('dark');
-
-const setTheme = (bodyClass, btnClass) => {
-  body.classList.remove(body.classList.contains('light') ? 'light' : 'dark');
-  btnTheme.classList.remove(btnTheme.classList.contains('fa-moon') ? 'fa-moon' : 'fa-sun');
-
-  addThemeClass(bodyClass, btnClass);
-
-  localStorage.setItem('portfolio-theme', bodyClass);
-  localStorage.setItem('portfolio-btn-theme', btnClass);
-};
-
-const toggleTheme = () =>
-  isDark() ? setTheme('light', 'fa-moon') : setTheme('dark', 'fa-sun');
-
-btnTheme.addEventListener('click', toggleTheme);
-
-const displayList = () => {
-  const navUl = document.querySelector('.nav__list');
-
-  if (btnHamburger.classList.contains('fa-bars')) {
-    btnHamburger.classList.remove('fa-bars');
-    btnHamburger.classList.add('fa-times');
-    navUl.classList.add('display-nav-list');
-  } else {
-    btnHamburger.classList.remove('fa-times');
-    btnHamburger.classList.add('fa-bars');
-    navUl.classList.remove('display-nav-list');
-  }
-};
-
-btnHamburger.addEventListener('click', displayList);
-
-const scrollUp = () => {
-  const btnScrollTop = document.querySelector('.scroll-top');
-
-  if (body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-    btnScrollTop.style.display = 'block';
-  } else {
-    btnScrollTop.style.display = 'none';
-  }
-};
-
-document.addEventListener('scroll', scrollUp);
+// Trigger reveal on load
+window.onload = reveal;
